@@ -1,0 +1,130 @@
+@import url("master.css");
+
+*,::before,::after{
+    box-sizing: border-box;
+  }
+
+:root {
+    --nav-width: 92px;
+
+    /*===== Colores =====*/
+    --first-color: #0C5DF4;
+    --bg-light-color3: #12192C;
+    --body-light-color: #fff;
+    --bg-dark-color3: #1a1c21;
+    --body-dark-color: #1e2025;
+    --sub-color: #B6CEFC;
+    --white-color: #FFF;
+    
+    /*===== Fuente y tipografia =====*/
+    --body-font: 'Poppins', sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    
+    /*===== z index =====*/
+    --z-fixed: 100;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    font-size: 1rem;
+    background-color: var(--body-light-color);
+    transition: .5s;
+}
+
+body.dark {
+    background-color: var(--body-dark-color);
+}
+
+h1{
+    margin: 0;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: var(--bg-light-color3);
+    color: var(--text-color);
+    padding: 1.5rem 1.5rem 2rem;
+    transition: .5s;
+    z-index: 1000;
+}
+
+.l-navbar.dark {
+    background-color: var(--bg-dark-color3);
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav-brand {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.nav-toggle {
+    font-size: 1.25rem;
+    padding: .75rem;
+    cursor: pointer;
+}
+
+.nav-logo {
+    display: inline-block;
+    font-weight: 600;
+}
+
+.nav-logo-icon {
+    color: var(--main-color);
+}
+
+.nav-link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: .75rem;
+    padding: .75rem;
+    color: var(--white-color);
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    transition: .3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-link:hover {
+    background-color: var(--first-color);
+}
+
+.nav-icon {
+    font-size: 1.25rem;
+    display: inline-block;
+}
+
+.nav-name {
+    font-size: .875rem;
+}
+
+.expander{
+    width: calc(var(--nav-width) + 15rem);
+}

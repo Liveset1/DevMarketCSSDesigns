@@ -1,0 +1,233 @@
+@import url(master.css);
+header {
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 2%;
+    transition: all .50s ease;
+    user-select: none;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar a.active:hover {
+    color: var(--main-color);
+}
+
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user i {
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+
+.main a:hover {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+.hero {
+    display: flex;
+    border-radius: 10px;
+    margin: 0 30px 30px;
+    /* background-color: var(--bg-color2); */
+}
+
+.hero-background {
+    background-color: var(--bg-color2);
+}
+
+.hero-header {
+    margin: 50px;
+    vertical-align: top;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-small {
+    font-size: 1.0rem;
+}
+
+.text-medium {
+    font-size: 2.0rem;
+}
+
+.text-large {
+    font-size: 3.0rem;
+}
+
+.text-desc {
+    font-size: 1.0rem;
+    font-weight: lighter;
+}
+
+.button {
+    user-select: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0 0 0;
+    border: none;
+    background: var(--main-color);
+    box-shadow: 0px 3px 0px var(--main-dark-color);
+}
+
+.button:hover {
+    transform: translateY(3px);
+    box-shadow: 0px 0px 0px;
+}
+
+.hero-image {
+    filter: drop-shadow(10px 10px 4px var(--main-color));
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.align-left {
+    text-align: left;
+    align-items: left;
+}
+
+.align-center {
+    text-align: center;
+    align-items: center;
+}
+
+.align-right {
+    text-align: right;
+    align-items: end;
+}
+
+.is-small {
+    height: 25vh;
+}
+
+.is-medium {
+    height: 50vh;
+}
+
+.is-large {
+    height: 75vh;
+}
+
+.quote-block {
+    background-color: var(--main-dark-color);
+}
+
+@media (max-width: 1280px) {
+    header {
+        padding: 14px 2%;
+    }
+
+    .navbar a {
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 1090px) {
+    .invisible-mobile {
+        visibility: hidden;
+        position: fixed;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        width: 270px;
+        height: 29vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+        visibility: hidden;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+
+    .navbar a:hover {
+        background-color: var(--text-color);
+        transform: translateY(5px);
+    }
+
+    .navbar a.active {
+        color: var(--text-color);
+    }
+
+    .navbar.open {
+        right: 2%;
+        visibility: visible;
+    }
+
+    .hero {
+        display: block;
+        border-radius: 10px;
+        margin: 0 20px 20px;
+        /* background-color: var(--bg-color2); */
+    }
+
+    .hero-image {
+        width: 200px;
+    }
+}
